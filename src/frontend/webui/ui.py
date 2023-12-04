@@ -55,8 +55,8 @@ def get_web_ui() -> gr.Blocks:
                 get_image_to_image_ui()
             with gr.TabItem("Generation Settings"):
                 get_generation_settings_ui()
-            # with gr.TabItem("Models"):
-            #     get_models_ui()
+            with gr.TabItem("Models"):
+                get_models_ui()
 
         # gr.HTML(_get_footer_message())
 
