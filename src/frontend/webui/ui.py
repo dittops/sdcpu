@@ -33,20 +33,20 @@ def get_web_ui() -> gr.Blocks:
         css=FastStableDiffusionPaths.get_css_path(),
         title="Image generation",
     ) as fastsd_web_ui:
-        gr.HTML("<center><H1>FastSD CPU</H1></center>")
+        gr.HTML("<center><H1>Image generation</H1></center>")
         current_mode = "LCM"
         if app_settings.settings.lcm_diffusion_setting.use_openvino:
             current_mode = "LCM-OpenVINO"
         elif app_settings.settings.lcm_diffusion_setting.use_lcm_lora:
             current_mode = "LCM-LoRA"
 
-        mode = gr.Radio(
-            ["LCM", "LCM-LoRA", "LCM-OpenVINO"],
-            label="Mode",
-            info="Current working mode",
-            value=current_mode,
-        )
-        mode.change(change_mode, inputs=mode)
+        # mode = gr.Radio(
+        #     ["LCM", "LCM-LoRA", "LCM-OpenVINO"],
+        #     label="Mode",
+        #     info="Current working mode",
+        #     value=current_mode,
+        # )
+        # mode.change(change_mode, inputs=mode)
 
         with gr.Tabs():
             with gr.TabItem("Text to Image"):
