@@ -31,7 +31,7 @@ def get_web_ui() -> gr.Blocks:
 
     with gr.Blocks(
         css=FastStableDiffusionPaths.get_css_path(),
-        title="FastSD CPU",
+        title="Image generation",
     ) as fastsd_web_ui:
         gr.HTML("<center><H1>FastSD CPU</H1></center>")
         current_mode = "LCM"
@@ -55,10 +55,10 @@ def get_web_ui() -> gr.Blocks:
                 get_image_to_image_ui()
             with gr.TabItem("Generation Settings"):
                 get_generation_settings_ui()
-            with gr.TabItem("Models"):
-                get_models_ui()
+            # with gr.TabItem("Models"):
+            #     get_models_ui()
 
-        gr.HTML(_get_footer_message())
+        # gr.HTML(_get_footer_message())
 
     return fastsd_web_ui
 

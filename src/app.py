@@ -45,7 +45,7 @@ parser.add_argument(
     "--lcm_model_id",
     type=str,
     help="Model ID or path,Default SimianLuo/LCM_Dreamshaper_v7",
-    default="SimianLuo/LCM_Dreamshaper_v7",
+    default="stabilityai/sdxl-turbo",
 )
 parser.add_argument(
     "--prompt",
