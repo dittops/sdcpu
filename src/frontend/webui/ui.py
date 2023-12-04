@@ -40,13 +40,13 @@ def get_web_ui() -> gr.Blocks:
         elif app_settings.settings.lcm_diffusion_setting.use_lcm_lora:
             current_mode = "LCM-LoRA"
 
-        # mode = gr.Radio(
-        #     ["LCM", "LCM-LoRA", "LCM-OpenVINO"],
-        #     label="Mode",
-        #     info="Current working mode",
-        #     value=current_mode,
-        # )
-        # mode.change(change_mode, inputs=mode)
+        mode = gr.Radio(
+            ["LCM", "LCM-LoRA", "LCM-OpenVINO"],
+            label="Mode",
+            info="Current working mode",
+            value=current_mode,
+        )
+        mode.change(change_mode, inputs=mode)
 
         with gr.Tabs():
             with gr.TabItem("Text to Image"):
